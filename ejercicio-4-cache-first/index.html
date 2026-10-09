@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123c69">
+  <meta name="description" content="Cache API y estrategia Cache-First para un App Shell.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Ejercicio 4 | Cache-First</title>
+</head>
+<body>
+  <header><a href="./">Aula PWA</a><span>Ejercicio 04</span></header>
+  <nav aria-label="Navegación principal"><a href="#inicio">Inicio</a><a href="#cache">Caché estática</a></nav>
+  <main>
+    <section id="inicio" class="hero"><img src="./icons/icon-192.png" width="72" height="72" alt=""><h1>Primero la caché.<br>Después la red.</h1><p>El App Shell se guarda durante la instalación para seguir disponible sin conexión.</p></section>
+    <section class="panel"><h2>Estado</h2><p id="network-status" role="status"></p><p id="sw-status" role="status">Esperando el registro…</p></section>
+    <section id="cache" class="panel"><h2>Recursos del App Shell</h2><p>HTML, CSS, JavaScript, manifiesto e iconos PNG. Comprueba la lista en Application → Cache Storage.</p><button id="inspect">Consultar caché</button><p id="cache-status" role="status">Activa el Service Worker antes de consultar.</p><ul id="resources"></ul></section>
+    <section class="panel"><h2>Prueba offline</h2><p>Tras la activación, marca Offline en DevTools y recarga esta página. Los recursos guardados seguirán funcionando.</p><p class="note">Un recurso no guardado devolverá un error 503 de texto si la red falla. El ejercicio 5 añade una vista HTML personalizada.</p></section>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>

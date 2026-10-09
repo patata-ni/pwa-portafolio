@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123c69">
+  <meta name="description" content="App Shell responsivo y configuración de Splash Screen nativa.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="PWA 2">
+  <link rel="apple-touch-startup-image" href="./splash/iphone-1320x2868.png" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="./splash/iphone-1206x2622.png" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="./splash/iphone-1290x2796.png" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="./splash/iphone-1179x2556.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="./splash/iphone-1284x2778.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="./splash/iphone-1170x2532.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="./splash/iphone-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="./splash/iphone-1242x2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="./splash/iphone-828x1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="./splash/iphone-1242x2208.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="./splash/iphone-750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="./splash/iphone-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Ejercicio 2 | App Shell</title>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="./"><img src="./icons/icon-192.png" width="40" height="40" alt=""> Aula PWA</a>
+    <span class="badge">Ejercicio 02</span>
+  </header>
+  <div class="shell">
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a><a href="#estructura">App Shell</a><a href="#splash">Splash nativa</a>
+    </nav>
+    <main>
+      <section id="inicio" class="hero">
+        <p class="eyebrow">DISEÑO QUE SE ADAPTA</p>
+        <h1>Tu aplicación,<br>en cualquier pantalla.</h1>
+        <p>Cabecera, navegación y contenido forman una estructura ligera que se adapta al móvil y al escritorio.</p>
+        <p id="display-status" role="status"></p>
+        <button id="install" hidden>Instalar aplicación</button>
+      </section>
+      <section id="estructura" class="panel">
+        <h2>Un App Shell responsivo</h2>
+        <div class="grid"><article><h3>Header</h3><p>Identidad de la aplicación siempre visible.</p></article><article><h3>Navegación</h3><p>Menú lateral en escritorio y horizontal en móvil.</p></article><article><h3>Contenido</h3><p>Un contenedor flexible, sin desbordamientos.</p></article></div>
+      </section>
+      <section id="splash" class="panel">
+        <h2>Splash Screen nativa</h2>
+        <p>El sistema la genera al abrir la aplicación instalada, usando el nombre, los iconos y el color de fondo del manifiesto. No es una pantalla HTML simulada.</p>
+        <p class="note">Para verla de verdad, instala esta PWA en Chrome para Android y ábrela desde su icono. La emulación de un móvil en DevTools no reproduce por sí sola la pantalla nativa.</p>
+      </section>
+    </main>
+  </div>
+  <footer>Ejercicio individual · App Shell y metadatos de arranque</footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>

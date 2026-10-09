@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123c69">
+  <meta name="description" content="Ejercicio individual de manifiesto e iconos para una PWA.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Ejercicio 1 | Manifest PWA</title>
+</head>
+<body>
+  <main class="card">
+    <img src="./icons/icon-192.png" width="88" height="88" alt="Icono de la aplicación">
+    <p class="eyebrow">EJERCICIO 01</p>
+    <h1>Una identidad para tu PWA</h1>
+    <p>El manifiesto define el nombre, la pantalla inicial, los colores y los iconos de esta aplicación.</p>
+    <dl>
+      <dt>Nombre</dt><dd>PWA · Ejercicio 1</dd>
+      <dt>Nombre corto</dt><dd>PWA 1</dd>
+      <dt>Inicio</dt><dd>./</dd>
+      <dt>Presentación</dt><dd>standalone</dd>
+      <dt>Iconos PNG</dt><dd>192 × 192 y 512 × 512 px</dd>
+    </dl>
+    <p id="status" role="status">Comprobando el modo de visualización…</p>
+    <button id="install" hidden>Instalar aplicación</button>
+    <p class="note">Si el navegador permite instalarla, aparecerá el botón. También puedes revisar su menú de instalación.</p>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>

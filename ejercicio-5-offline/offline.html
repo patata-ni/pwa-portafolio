@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123c69">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <title>Modo Sin Conexión | Aula PWA</title>
+</head>
+<body class="offline">
+  <main class="panel">
+    <img src="./icons/icon-192.png" width="88" height="88" alt="">
+    <h1>Modo Sin Conexión</h1>
+    <p>No pudimos conectar con el servidor y esta página no está guardada en tu dispositivo.</p>
+    <p>La página de inicio sigue disponible. Recupera la conexión y vuelve a intentar abrir esta página.</p>
+    <div class="offline-actions"><a id="home" class="button" href="./">Volver al inicio</a><button id="retry">Reintentar</button></div>
+    <p id="offline-status" role="status"></p>
+  </main>
+  <script src="./offline.js" defer></script>
+</body>
+</html>

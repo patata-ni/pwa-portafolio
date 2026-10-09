@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123c69">
+  <meta name="description" content="Interceptor de peticiones y página personalizada de modo sin conexión.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Ejercicio 5 | Modo sin conexión</title>
+</head>
+<body>
+  <header><a href="./">Aula PWA</a><span>Ejercicio 05</span></header>
+  <nav aria-label="Navegación principal"><a href="#inicio">Inicio</a><a href="#prueba">Probar fallback</a></nav>
+  <main>
+    <section id="inicio" class="hero"><img src="./icons/icon-192.png" width="72" height="72" alt=""><h1>Sin internet.<br>Sin perder el rumbo.</h1><p>Si una página no está guardada y la red falla, el Service Worker ofrece una vista personalizada.</p></section>
+    <section class="panel"><h2>Estado de la aplicación</h2><p id="network-status" role="status"></p><p id="sw-status" role="status">Esperando el registro…</p></section>
+    <section id="prueba" class="panel">
+      <h2>Comprueba el fallback</h2>
+      <ol><li>Espera a que esta página esté controlada por el Service Worker.</li><li>Activa Offline en DevTools → Network.</li><li>Abre la página siguiente. Existe en el servidor, pero no forma parte del precache.</li></ol>
+      <a class="button" href="./pagina-no-cacheada.html">Abrir página no guardada</a>
+      <p class="note">Con conexión verás la página de red. Sin conexión verás “Modo Sin Conexión”. Un error HTTP 404 no se confunde con una pérdida de conexión.</p>
+    </section>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>

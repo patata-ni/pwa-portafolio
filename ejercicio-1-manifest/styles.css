@@ -1,0 +1,14 @@
+:root { font-family: system-ui, sans-serif; color: #123c69; background: #eef4fa; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 40px 20px; min-height: 100vh; display: grid; place-items: center; }
+.card { width: min(100%, 640px); background: white; border-radius: 24px; padding: clamp(24px, 5vw, 48px); box-shadow: 0 20px 60px #123c6918; }
+.eyebrow { color: #176c70; font-weight: 800; letter-spacing: .15em; font-size: .8rem; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.7rem); line-height: 1.1; }
+p { line-height: 1.65; }
+dl { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; border-block: 1px solid #dce6ef; padding-block: 24px; }
+dt { font-weight: 700; } dd { margin: 0; overflow-wrap: anywhere; }
+button { border: 0; border-radius: 12px; padding: 14px 20px; background: #123c69; color: white; font: inherit; cursor: pointer; }
+button:focus-visible { outline: 3px solid #efad36; outline-offset: 4px; }
+.note { font-size: .85rem; color: #4d647b; }
+[hidden] { display: none !important; }
+@media (max-width: 400px) { dl { grid-template-columns: 1fr; gap: 8px; } dd { margin-bottom: 12px; } }

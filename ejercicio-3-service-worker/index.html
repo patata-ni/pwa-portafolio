@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123c69">
+  <meta name="description" content="Registro asíncrono y ciclo de vida de un Service Worker.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Ejercicio 3 | Service Worker</title>
+</head>
+<body>
+  <header><a href="./">Aula PWA</a><span>Ejercicio 03</span></header>
+  <nav aria-label="Navegación principal"><a href="#ciclo">Ciclo de vida</a><a href="#eventos">Registro de eventos</a></nav>
+  <main>
+    <section id="ciclo" class="hero"><img src="./icons/icon-192.png" width="72" height="72" alt=""><h1>Un proceso detrás de tu aplicación</h1><p>Un Service Worker escucha los eventos install, activate y fetch sin bloquear la interfaz.</p></section>
+    <section class="panel">
+      <h2>Estado del Service Worker</h2>
+      <p id="sw-status" role="status">Esperando el registro…</p>
+      <p id="controller" role="status">Comprobando el controlador…</p>
+      <p class="note">Este ejercicio usa la red, sin caché ni fallback. Esas funciones se estudian de forma independiente en los ejercicios 4 y 5.</p>
+    </section>
+    <section id="eventos" class="panel"><h2>Registro de eventos</h2><ol id="events" aria-label="Eventos observados"></ol><p>Consulta también la consola del Service Worker en DevTools para ver install, activate y cada fetch.</p></section>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>

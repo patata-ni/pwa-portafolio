@@ -1,0 +1,15 @@
+:root { font-family: system-ui, sans-serif; background: #eef4fa; color: #123c69; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header { padding: 22px max(20px, calc((100vw - 900px) / 2)); background: #123c69; color: white; display: flex; justify-content: space-between; gap: 16px; }
+header a { color: white; text-decoration: none; font-weight: 800; }
+nav { display: flex; flex-wrap: wrap; gap: 20px; max-width: 900px; margin: auto; padding: 20px; }
+nav a { color: #123c69; }
+main { max-width: 900px; margin: auto; padding: 0 20px 32px; }
+.hero, .panel { padding: clamp(24px, 5vw, 40px); border-radius: 22px; background: white; margin-bottom: 22px; }
+.hero { background: #123c69; color: white; }
+h1 { font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.15; }
+p, li { line-height: 1.65; overflow-wrap: anywhere; }
+.note { color: #4d647b; font-size: .9rem; }
+button { background: #123c69; color: white; padding: 14px 20px; border: 0; border-radius: 12px; font: inherit; cursor: pointer; }
+a:focus-visible, button:focus-visible { outline: 3px solid #efad36; outline-offset: 4px; }

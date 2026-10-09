@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio de cinco ejercicios de Progressive Web Apps.">
+  <title>Portafolio PWA</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #123c69; background: #eef4fa; }
+    body { margin: 0; padding: 40px 20px; display: grid; place-items: center; min-height: 100vh; box-sizing: border-box; }
+    main { width: min(100%, 680px); background: white; border-radius: 24px; padding: clamp(24px, 5vw, 48px); }
+    h1 { margin-top: 0; }
+    li { margin-bottom: 12px; line-height: 1.5; }
+    a { color: #123c69; font-weight: 700; }
+    a:focus-visible { outline: 3px solid #efad36; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Portafolio PWA</h1>
+    <p>Cinco ejercicios independientes. Cada uno se instala y funciona por separado.</p>
+    <ol>
+      <li><a href="./ejercicio-1-manifest/">Web App Manifest e iconos</a></li>
+      <li><a href="./ejercicio-2-app-shell/">App Shell y Splash Screen</a></li>
+      <li><a href="./ejercicio-3-service-worker/">Ciclo de vida del Service Worker</a></li>
+      <li><a href="./ejercicio-4-cache-first/">Cache API y Cache-First</a></li>
+      <li><a href="./ejercicio-5-offline/">Interceptor y modo sin conexión</a></li>
+    </ol>
+  </main>
+</body>
+</html>
