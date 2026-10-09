@@ -31,20 +31,30 @@ Otro puerto: `node .\servidor.cjs 8202`.
 3. Instala desde el menú de Chrome si está disponible y abre la aplicación.
    Su estado debe indicar modo independiente.
 
-## Verificar la Splash Screen real
+## Verificar la Splash Screen nativa
 
 La Splash Screen es del navegador/sistema operativo, NO una animación HTML.
-DevTools verifica el manifiesto y permite revisar la aplicación instalada,
-pero emular un teléfono NO demuestra la Splash Screen nativa.
+Chrome la construye al abrir la app instalada con tres datos del manifiesto:
+`name`, `background_color` (`#eef4fa`) y un icono PNG. DevTools no incluye un
+visor de splash, pero sí permite verificar que se cumplen esos requisitos:
 
-Para comprobarla: publica en GitHub Pages (HTTPS), abre la URL en Chrome
-para Android, elige instalar, cierra la aplicación y ábrela desde su icono.
-Comprueba el icono, nombre y fondo `#eef4fa` durante el arranque en frío.
-Su duración y presentación dependen de Chrome y Android; puede ser breve.
-Chrome de escritorio no garantiza la misma experiencia de Android.
+1. Application → Manifest → Identity: `name` = "PWA · Ejercicio 2".
+2. Presentation: `background_color` = `#eef4fa`, `display` = standalone.
+3. Icons: aparecen las miniaturas de 192 × 192 y 512 × 512, sin avisos.
+4. Installability: sin errores. Con el botón de instalar de la barra de
+   direcciones de Chrome se simula la instalación; la app se abre en su
+   propia ventana, sin la interfaz del navegador.
+5. Pestaña Console: sin errores del manifiesto.
 
-Esta comprobación en un dispositivo real queda pendiente hasta realizarla
-allí. No se declara verificada solo por revisar el manifiesto.
+Resultado en la versión publicada: Chrome (protocolo DevTools,
+`Page.getAppManifest` y `Page.getInstallabilityErrors`) no devuelve errores del
+manifiesto ni de instalabilidad. El manifiesto es válido, tiene `name`,
+`background_color` y los dos iconos PNG.
+
+Para ver la splash en un móvil Android: abre la URL en Chrome, elige instalar,
+cierra la aplicación y ábrela desde su icono. Su duración depende de Chrome y
+Android; puede ser breve. Chrome de escritorio no muestra la misma pantalla.
+Esta ruta de Android no se ha probado en un dispositivo.
 
 ## iPhone (Safari)
 
@@ -60,7 +70,7 @@ Max en vertical; en horizontal y en iPad no hay imagen.
    el icono y añádelo de nuevo.
 
 Safari no ofrece `beforeinstallprompt`: el botón de instalar no aparece.
-Estas imágenes no se han probado en un iPhone físico.
+La splash se vio correctamente en un iPhone.
 Este ejercicio no incluye Service Worker: corresponde al ejercicio 3.
 
 ## GitHub Pages
